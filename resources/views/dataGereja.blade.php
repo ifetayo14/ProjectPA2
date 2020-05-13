@@ -1,5 +1,9 @@
 @extends('layouts.layout')
 
+@section('title')
+    <title>Data Gereja</title>
+@endsection
+
 @section('main-content')
 
     <!-- Page Heading -->

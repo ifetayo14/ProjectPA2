@@ -1,5 +1,9 @@
 @extends('layouts.layout')
 
+@section('title')
+    <title>Edit Data Gereja</title>
+@endsection
+
 @section('main-content')
     <div class="card o-hidden border-0 shadow-lg my-5">
         <div class="card-body p-0">

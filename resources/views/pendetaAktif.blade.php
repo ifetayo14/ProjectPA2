@@ -1,5 +1,9 @@
 @extends('layouts.layout')
 
+@section('title')
+    <title>Data Pendeta Aktif</title>
+@endsection
+
 @section('main-content')
 
     <!-- Page Heading -->
@@ -7,6 +11,13 @@
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
+        @if($message = Session::get('success'))
+            <div class="alert alert-success">
+                <p>
+                    {{$message}}
+                </p>
+            </div>
+        @endif
         <div class="card-body">
             <div class="table-responsive">
                 <a href="{{url('addPendetaAktif')}}" class="btn btn-primary btn-icon-split btn-sm float-right btnAdd">
@@ -19,149 +30,30 @@
                     <thead>
                     <tr>
                         <th>Nama</th>
-                        <th>Umur</th>
+                        <th>Tempat Tanggal Lahir</th>
                         <th>Jenis Kelamin</th>
                         <th>Tempat Bertugas</th>
                         <th>Aksi</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td><a href="">Valentine Trihandayani</a></td>
-                        <td>26</td>
-                        <td>Perempuan</td>
-                        <td>Balige</td>
-                        <td>
-                            <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
-                                <span><i class="fas fa-tools"></i></span>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="{{url('/editPendetaAktif')}}">Edit</a>
-                                <a class="dropdown-item" href="#">Hapus</a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><a href="">Leonard Halomoan Sihombing</a></td>
-                        <td>36</td>
-                        <td>Laki-laki</td>
-                        <td>Tarutung</td>
-                        <td>
-                            <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
-                                <span><i class="fas fa-tools"></i></span>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="{{url('/editPendetaAktif')}}">Edit</a>
-                                <a class="dropdown-item" href="#">Hapus</a>
-                            </div>
-                        </td>
-
-                    </tr>
-                    <tr>
-                        <td><a href="">Faustine B A Ompusunggu</a></td>
-                        <td>48</td>
-                        <td>Laki-laki</td>
-                        <td>Porsea</td>
-                        <td>
-                            <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
-                                <span><i class="fas fa-tools"></i></span>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="{{url('/editPendetaAktif')}}">Edit</a>
-                                <a class="dropdown-item" href="#">Hapus</a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><a href="{{url('/detailPendetaAktif')}}" class="table-link">Putri Siburian</a></td>
-                        <td>43</td>
-                        <td>Perempuan</td>
-                        <td>Sitoluama</td>
-                        <td>
-                            <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
-                                <span><i class="fas fa-tools"></i></span>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="{{url('/editPendetaAktif')}}">Edit</a>
-                                <a class="dropdown-item" href="#">Hapus</a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><a href="">Martin Simanjuntak</a></td>
-                        <td>29</td>
-                        <td>Laki-laki</td>
-                        <td>Laguboti</td>
-                        <td>
-                            <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
-                                <span><i class="fas fa-tools"></i></span>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="{{url('/editPendetaAktif')}}">Edit</a>
-                                <a class="dropdown-item" href="#">Hapus</a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><a href="">Saut Raja Marihot Tua Sihotang</a></td>
-                        <td>53</td>
-                        <td>Laki-laki</td>
-                        <td>Samosir</td>
-                        <td>
-                            <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
-                                <span><i class="fas fa-tools"></i></span>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="{{url('/editPendetaAktif')}}">Edit</a>
-                                <a class="dropdown-item" href="#">Hapus</a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><a href="">Sri Hartini Manurung</a></td>
-                        <td>24</td>
-                        <td>Perempuan</td>
-                        <td>Garoga</td>
-                        <td>
-                            <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
-                                <span><i class="fas fa-tools"></i></span>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="{{url('/editPendetaAktif')}}">Edit</a>
-                                <a class="dropdown-item" href="#">Hapus</a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><a href="">Exalanty Hutabarat</a></td>
-                        <td>55</td>
-                        <td>Perempuan</td>
-                        <td>Soposurung</td>
-                        <td>
-                            <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
-                                <span><i class="fas fa-tools"></i></span>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="{{url('/editPendetaAktif')}}">Edit</a>
-                                <a class="dropdown-item" href="#">Hapus</a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><a href="">Chindy Hutapea</a></td>
-                        <td>Perempuan</td>
-                        <td>33</td>
-                        <td>Tambunan</td>
-                        <td>
-                            <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
-                                <span><i class="fas fa-tools"></i></span>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="{{url('/editPendetaAktif')}}">Edit</a>
-                                <a class="dropdown-item" href="#">Hapus</a>
-                            </div>
-                        </td>
-                    </tr>
+                    @foreach($dataPendeta as $row)
+                        <tr>
+                            <td><a href="">{{$row['name']}}</a></td>
+                            <td>{{$row['birthPlace']}}, {{$row['birthDate']}}</td>
+                            <td>{{$row['gender']}}</td>
+                            <td>{{$row['workPlace']}}</td>
+                            <td>
+                                <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                                    <span><i class="fas fa-tools"></i></span>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="{{url('/editPendetaAktif')}}">Edit</a>
+                                    <a class="dropdown-item" href="#">Hapus</a>
+                                </div>
+                            </td>
+                        </tr>
+                    @endforeach
                     </tbody>
                 </table>
             </div>

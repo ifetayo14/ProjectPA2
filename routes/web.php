@@ -41,9 +41,7 @@ Route::get('/detailKolekteGereja', function () {
     return view('detailKolekteGereja');
 });
 
-Route::get('/pendetaAktif', function () {
-    return view('pendetaAktif');
-});
+Route::get('/pendetaAktif', 'PendetaAktifController@index');
 
 Route::get('/pendetaPensiun', function () {
     return view('pendetaPensiun');
@@ -108,3 +106,5 @@ Route::get('/profile', function () {
 Route::get('/editProfile', function () {
     return view('editProfile');
 });
+
+Route::resource('penAktif', 'PendetaAktifController');

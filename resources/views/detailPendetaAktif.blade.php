@@ -1,5 +1,9 @@
 @extends('layouts.layout')
 
+@section('title')
+    <title>Detail Pendeta Aktif</title>
+@endsection
+
 @section('main-content')
     <!-- Page Heading -->
     <h1 class="h3 mb-2 text-gray-800">Data Pendeta Aktif</h1>

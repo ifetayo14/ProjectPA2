@@ -1,5 +1,9 @@
 @extends('layouts.layout')
 
+@section('title')
+    <title>Data Pendeta Pensiun</title>
+@endsection
+
 @section('main-content')
 
     <!-- Page Heading -->

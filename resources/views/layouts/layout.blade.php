@@ -1,3 +1,6 @@
+<?php
+use Illuminate\Support\Facades\Session;
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +12,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Dashboard</title>
+    @yield('title')
 
     <!-- Custom fonts for this template-->
     <link href="{{url('templ/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">

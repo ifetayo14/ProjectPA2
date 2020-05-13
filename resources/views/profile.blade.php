@@ -1,8 +1,12 @@
 @extends('layouts.layout')
 
+@section('title')
+    <title>Profil</title>
+@endsection
+
 @section('main-content')
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Profile</h1>
+    <h1 class="h3 mb-2 text-gray-800">Profil</h1>
 
     <div class="col-xl-12 col-lg-7">
         <div class="card shadow mb-4">
