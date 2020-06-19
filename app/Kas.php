@@ -8,4 +8,6 @@ class Kas extends Model
 {
     
     protected $fillable = ['nama_gereja','bulan','pemasukan','pengeluaran','total'];
+
+    protected $table = 'kas';
 }

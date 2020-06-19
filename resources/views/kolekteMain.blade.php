@@ -27,6 +27,7 @@
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                             <tr>
+                                <th>#</th>
                                 <th>Nama Gereja</th>
                                 <th>Bulan</th>
                                 <th>Minggu</th>
@@ -34,18 +35,15 @@
                             </tr>
                             </thead>
                             <tbody>
+                            @foreach($kolekteGereja as $row)
                             <tr>
-                                <td><a href="{{url('detailKolekteGereja')}}" class="table-link">HKBP Sitoluama</a></td>
-                                <td>April</td>
-                                <td>3</td>
-                                <td>2.122.000</td>
+                                <td>{{ $loop -> iteration }}</td>
+                                <td><a href="/detailKolekteGereja/{{ $row['id'] }}" class="table-link">{{ $row['nama_gereja'] }}</a></td>
+                                <td>{{ $row['bulan'] }}</td>
+                                <td>{{ $row['minggu'] }}</td>
+                                <td>{{ $row['pemasukan'] }}</td>
                             </tr>
-                            <tr>
-                                <td><a href="">HKBP Sianjur Pohan Julu</a></td>
-                                <td>April</td>
-                                <td>3</td>
-                                <td>1.519.713</td>
-                            </tr>
+                            @endforeach
                             </tbody>
                         </table>
                     </div>

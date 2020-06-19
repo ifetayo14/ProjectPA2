@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('title')
-    <title>Detail Kolekte Gereja</title>
+    <title>Detail Kolekte Gereja {{ $kolekte -> nama_gereja }}</title>
 @endsection
 
 @section('main-content')
@@ -33,11 +33,13 @@
                             </tr>
                             </thead>
                             <tbody>
+                            @foreach($kolekte as $row)
                             <tr>
-                                <td>April</td>
-                                <td>3</td>
-                                <td>2.122.000</td>
+                                <td>{{ $row['bulan'] }}</td>
+                                <td>{{ $row['minggu'] }}</td>
+                                <td>{{ $row['pemasukan'] }}</td>
                             </tr>
+                            @foreach
                             </tbody>
                         </table>
                     </div>

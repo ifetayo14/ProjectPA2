@@ -13,7 +13,7 @@ class CreatePendetaPensiunsTable extends Migration
      */
     public function up()
     {
-        Schema::create('pendeta_pensiuns', function (Blueprint $table) {
+        Schema::create('pendeta_pensiun', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('birthPlace');
@@ -35,6 +35,6 @@ class CreatePendetaPensiunsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pendeta_pensiuns');
+        Schema::dropIfExists('pendeta_pensiun');
     }
 }

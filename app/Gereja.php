@@ -8,5 +8,5 @@ class Gereja extends Model
 {
     protected $fillable = ['nama', 'pendeta', 'alamat', 'resort', 'jemaat', 'fax'];
 
-    protected $table = 'data_gerejas';
+    protected $table = 'data_gereja';
 }

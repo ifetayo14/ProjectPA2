@@ -13,7 +13,7 @@ class CreatePendetaAktifsTable extends Migration
      */
     public function up()
     {
-        Schema::create('pendeta_aktifs', function (Blueprint $table) {
+        Schema::create('pendeta_aktif', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('birthPlace');
@@ -35,6 +35,6 @@ class CreatePendetaAktifsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pendeta_aktifs');
+        Schema::dropIfExists('pendeta_aktif');
     }
 }

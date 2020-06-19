@@ -13,13 +13,14 @@ class CreateDataGerejasTable extends Migration
      */
     public function up()
     {
-        Schema::create('data_gerejas', function (Blueprint $table) {
+        Schema::create('data_gereja', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_gereja');
+            $table->string('nama');
+            $table->string('pendeta');
             $table->string('alamat');
-            $table->string('no_tlp');
-            $table->string('email');
-            $table->string('jlh_jemaat');
+            $table->string('resort');
+            $table->string('jemaat');
+            $table->string('fax');
             $table->timestamps();
         });
     }
@@ -31,6 +32,6 @@ class CreateDataGerejasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('data_gerejas');
+        Schema::dropIfExists('data_gereja');
     }
 }

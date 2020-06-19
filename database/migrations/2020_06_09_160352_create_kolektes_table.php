@@ -13,7 +13,7 @@ class CreateKolektesTable extends Migration
      */
     public function up()
     {
-        Schema::create('kolektes', function (Blueprint $table) {
+        Schema::create('kolekte', function (Blueprint $table) {
             $table->id();
             $table->string('nama_gereja');
             $table->string('bulan');
@@ -30,6 +30,6 @@ class CreateKolektesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kolektes');
+        Schema::dropIfExists('kolekte');
     }
 }

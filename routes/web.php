@@ -35,21 +35,11 @@ Route::get('/detailGereja', function () {
     return view('detailGereja');
 });
 
-Route::get('/kasMain', function () {
-    return view('kasMain');
-});
+Route::get('/kasMain', 'KasAdminController@index');
+Route::get('/detailKasGereja/{id}', 'KasAdminController@show');
 
-Route::get('/kolekteMain', function () {
-    return view('kolekteMain');
-});
-
-Route::get('/detailKasGereja', function () {
-    return view('detailKasGereja');
-});
-
-Route::get('/detailKolekteGereja', function () {
-    return view('detailKolekteGereja');
-});
+Route::get('/kolekteMain', 'KolekteAdminController@index');
+Route::get('/detailKolekteGereja/{id}', 'KolekteAdminController@show');
 
 Route::get('/editPengumuman', function () {
     return view('editPengumuman');
