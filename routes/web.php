@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function (){
-    return view('index');
+    return view('mainPage');
 });
 
 Route::post('/loginValidation', 'AuthController@login');
@@ -78,7 +78,7 @@ Route::get('/detailDataPersonalia/{dataGereja}', 'DataGerejaPersonaliaController
 Route::delete('/detailDataPersonalia/{dataGereja}', 'DataGerejaPersonaliaController@destroy');
 Route::get('/editDataGerejaPersonalia/{dataGereja}', 'DataGerejaPersonaliaController@edit');
 Route::patch('/updateDataGerejaPersonalia/{dataGereja}', 'DataGerejaPersonaliaController@update');
-    
+
     //Pendeta
 Route::get('/dataGerejaPendeta', 'DataGerejaPendetaController@show');
 Route::get('/addDataGerejaPendeta', 'DataGerejaPendetaController@create');
@@ -161,7 +161,7 @@ Route::get('/detailPendetaAktif/{pendetaAktif}', 'PendetaAktifController@show');
 Route::delete('/detailPendetaAktif/{pendetaAktif}', 'PendetaAktifController@destroy');
 Route::get('/editAktif/{pendetaAktif}', 'PendetaAktifController@edit');
 Route::patch('/updateAktif/{pendetaAktif}', 'PendetaAktifController@update');
-    
+
     //Personalia
 Route::get('/pendetaAktifPersonalia', 'PendetaAktifPersonaliaController@index');
 Route::get('/addPendetaAktifPersonalia', 'PendetaAktifPersonaliaController@create');

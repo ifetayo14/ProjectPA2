@@ -26,19 +26,13 @@ class AuthController extends Controller
 
                 return redirect('/indexPersonalia');
             }
-            elseif ($data->role=="pendeta") {
-                $request->session()->put('username', $data->username);
-                $request->session()->put('role', $data->role);
-
-                return redirect('/indexPendeta');
-            }
         }
-        return redirect('/')->with('error', 'Username atau Password Anda Salah');
+        return redirect('/index')->with('error', 'Username atau Password Anda Salah');
     }
 
     public function logout(){
         Session::flush();
-        
-        return redirect('/');
+
+        return redirect('/index');
     }
 }
