@@ -34,7 +34,7 @@
                 <div class="col-md-12">
                     <button id="primary-nav-button" type="button">Menu</button>
                     <a href="index.html"><div class="logo">
-                            <img src="templ/img/logoApp.png" alt="Venue Logo">
+                            <img src="templ/img/logoApp.png" alt="">
                         </div></a>
                     <nav id="primary-nav" class="dropdown cf">
                         <ul class="dropdown menu">

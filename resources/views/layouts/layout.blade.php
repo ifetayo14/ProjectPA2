@@ -32,8 +32,10 @@ use Illuminate\Support\Facades\Session;
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{url('/indexAdministrator')}}">
-            <div class="sidebar-brand-text mx-3">Sistem Kepegawaian Gereja</div>
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{url('/indexAdministrator')}}" style="background-color: #FFF">
+            <div class="sidebar-brand-text mx-3">
+                <img src="templ/img/logoApp.png" alt="">
+            </div>
         </a>
 
         <!-- Divider -->
@@ -52,18 +54,18 @@ use Illuminate\Support\Facades\Session;
                 <span>Data Gereja</span></a>
         </li>
 
-        <li class="nav-item {{(request()->is('pendetaAktif') ? 'active' : '')}} {{(request()->is('pendetaPensiun') ? 'active' : '')}}">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-                <i class="fas fa-fw fa-bible"></i>
-                <span>Data Pendeta</span>
-            </a>
-            <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="{{url('pendetaAktif')}}">Pendeta Aktif</a>
-                    <a class="collapse-item" href="{{url('pendetaPensiun')}}">Pendeta Pensiun</a>
-                </div>
-            </div>
-        </li>
+{{--        <li class="nav-item {{(request()->is('pendetaAktif') ? 'active' : '')}} {{(request()->is('pendetaPensiun') ? 'active' : '')}}">--}}
+{{--            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">--}}
+{{--                <i class="fas fa-fw fa-bible"></i>--}}
+{{--                <span>Data Pendeta</span>--}}
+{{--            </a>--}}
+{{--            <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">--}}
+{{--                <div class="bg-white py-2 collapse-inner rounded">--}}
+{{--                    <a class="collapse-item" href="{{url('pendetaAktif')}}">Pendeta Aktif</a>--}}
+{{--                    <a class="collapse-item" href="{{url('pendetaPensiun')}}">Pendeta Pensiun</a>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </li>--}}
 
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item {{(request()->is('kasMain') ? 'active' : '')}} {{(request()->is('kolekteMain') ? 'active' : '')}}">
