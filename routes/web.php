@@ -69,6 +69,14 @@ Route::get('/editProfile', function () {
     return view('editProfile');
 });
 
+Route::get('/pengumumanJemaat', function() {
+    return view('pengumumanJemaat');
+});
+
+Route::get('/detailPengumumanJemaat',function (){
+    return view('detailPengumumanJemaat');
+});
+
 //DATA GEREJA
     //Personalia
 Route::get('/dataPersonalia', 'DataGerejaPersonaliaController@index');
@@ -130,6 +138,10 @@ Route::delete('/detailPengumumanPendeta/{pengumumanGereja}', 'PengumumanPendetaC
 Route::get('/editPengumumanGerejaPendeta/{pengumumanGereja}', 'PengumumanPendetaController@edit');
 Route::patch('/updatePengumumanGerejaPendeta/{pengumumanGereja}', 'PengumumanPendetaController@update');
 Route::get('/detailPengumumanPendetaIndex/{pengumumanGereja}', 'PengumumanPendetaController@showIndex');
+
+    //Jemaat
+Route::get('/pengumumanJemaat', 'PengumumanController@indexJemaat');
+Route::get('/detailPengumumanJemaat/{pengumuman}', 'PengumumanController@showJemaat');
 
 
 //KOLEKTE GEREJA
@@ -226,3 +238,10 @@ Route::get('/detailPendetaPensiunPersonalia/{pendetaPensiun}', 'PendetaPensiunPe
 Route::delete('/detailPendetaPensiunPersonalia/{pendetaPensiun}', 'PendetaPensiunPersonaliaController@destroy');
 Route::get('/editPensiunPersonalia/{pendetaPensiun}', 'PendetaPensiunPersonaliaController@edit');
 Route::patch('/updatePensiunPersonalia/{pendetaPensiun}', 'PendetaPensiunPersonaliaController@update');
+
+//Route::get('/detailPengumumanJemaat','PengumumanController');
+
+//Artikel
+Route::get('/artikel', function () {
+    return view('artikel');
+});

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Pengumuman;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PengumumanController extends Controller
 {
@@ -16,6 +17,11 @@ class PengumumanController extends Controller
     {
         $dataPengumuman = Pengumuman::all();
         return view('pengumuman', compact('dataPengumuman'));
+    }
+    public function indexJemaat()
+    {
+        $dataPengumuman = Pengumuman::all();
+        return view('/pengumumanJemaat', compact('dataPengumuman'));
     }
 
     /**
@@ -59,6 +65,11 @@ class PengumumanController extends Controller
     public function show(Pengumuman $pengumuman)
     {
         return view('detailPengumuman', compact('pengumuman'));
+    }
+
+    public function showJemaat(Pengumuman $pengumuman)
+    {
+        return view('detailPengumumanJemaat', compact('pengumuman'));
     }
 
     /**

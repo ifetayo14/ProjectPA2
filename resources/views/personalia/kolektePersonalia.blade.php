@@ -10,14 +10,6 @@
 
     <div class="row">
         <div class="col-xl-12 col-lg-7">
-            <div class="card shadow">
-                <!-- Card Body -->.
-                <div class="card-body">
-                    <div class="chart-area">
-                        <canvas id="komiteGereja"></canvas>
-                    </div>
-                </div>
-            </div>
 
             <br>
 
