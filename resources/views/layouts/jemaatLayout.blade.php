@@ -41,7 +41,7 @@
                             <li class='active'><a href="{{url('/')}}">Beranda</a></li>
                             <li><a href="#">Gereja</a>
                                 <ul class="sub-menu">
-                                    <li><a href="#">HKBP Tornagodang</a></li>
+                                    <li><a href="{{url('/gerejaPage')}}">HKBP Tornagodang</a></li>
                                     <li><a href="#">HKBP Pardomuan</a></li>
                                     <li><a href="#">HKBP Oikumene Sibosur</a></li>
                                     <li><a href="#">HKBP Matio</a></li>

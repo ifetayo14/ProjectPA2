@@ -77,6 +77,10 @@ Route::get('/detailPengumumanJemaat',function (){
     return view('detailPengumumanJemaat');
 });
 
+//DATA GEREJA JEMAAT
+
+Route::get('/gerejaPage', 'PengumumanController@indexGereja');
+
 //DATA GEREJA
     //Personalia
 Route::get('/dataPersonalia', 'DataGerejaPersonaliaController@index');

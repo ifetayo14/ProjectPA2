@@ -440,6 +440,10 @@ section.banner {
   display: none;
 }
 
+/*section.popular-places {*/
+/*    background-color: #f4f4f4;*/
+/*}*/
+
 .popular-places .owl-dots {
   margin-top: 40px;
   text-align: center;
@@ -448,7 +452,7 @@ section.banner {
 .popular-places .owl-dots .owl-dot span  {
   width: 12px;
   height: 12px;
-  background-color: #cdcdcd!important;
+  background-color: #f4f4f4;
   display: inline-block;
   border-radius: 50%;
   margin: 0 3px;
@@ -613,9 +617,7 @@ section.banner {
 /*artikel*/
 
 section.featured-places {
-  margin-top: 80px;
   padding-bottom: 80px;
-  background-color: #f4f4f4;
 }
 
 .featured-places .featured-item .thumb {
@@ -903,16 +905,16 @@ section#video-container {
   border-radius: 50%;
 }
 
-section.pricing-tables{
-    background-color: #f4f4f4;
-}
-
 section.pricing-tables .table-item {
   text-align: center;
   background-color: #eeeeee;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   padding: 0px 0px 40px 0px;
+}
+
+section.pricing-tables{
+    background-color: #f4f4f4;
 }
 
 section.pricing-tables .table-item .top-content {
@@ -1287,10 +1289,6 @@ footer .contact-info ul li a {
     margin-bottom: 20px;
     border-bottom: 1px solid #ddd;
     border-radius: 0px;
-  }
-
-  .featured-places .featured-item {
-    margin-bottom: 30px;
   }
 
   .featured-places .featured-item .down-content .first-button {

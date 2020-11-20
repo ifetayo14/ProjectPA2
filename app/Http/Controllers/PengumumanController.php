@@ -18,10 +18,17 @@ class PengumumanController extends Controller
         $dataPengumuman = Pengumuman::all();
         return view('pengumuman', compact('dataPengumuman'));
     }
+
     public function indexJemaat()
     {
         $dataPengumuman = Pengumuman::all();
         return view('/pengumumanJemaat', compact('dataPengumuman'));
+    }
+
+    public function indexGereja()
+    {
+        $dataPengumuman = Pengumuman::all();
+        return view('/gerejaPage', compact('dataPengumuman'));
     }
 
     /**
