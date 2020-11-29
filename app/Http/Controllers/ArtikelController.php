@@ -41,6 +41,7 @@ class ArtikelController extends Controller
         $artikel = new Artikel();
         $artikel->judul = $request->input('judul');
         $artikel->link = $request->input('link');
+        $artikel->ringkasan = $request->input('ringkasan');
 
         $file = $request->file('image');
         $extension = $file->getClientOriginalExtension(); // ngambil extension foto

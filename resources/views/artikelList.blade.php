@@ -24,16 +24,32 @@
                         <i class="fas fa-plus"></i>
                     </span>
                     <span class="text">Tambah Artikel</span>
-
                 </a>
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-
+                <br><br><br>
                     @foreach($dataArtikel as $row)
-                        <div class="col-md-4">
-                            <img src="{{ $row['image'] }}" alt="">
+                        <div class="col-md-12">
+                            <table>
+                                <tr>
+                                    <td rowspan="4"><img src="{{ asset('uploads/artikel/' . $row -> image) }}" alt="" style="width: 250px; height: 150px"></td>
+                                    <td></td>
+                                    <td style="font-size: 14pt"><a href="">{{ $row['judul'] }}</a></td>
+                                </tr>
+                                <tr>
+                                    <td style="color: #FFF">...</td>
+                                    <td>
+                                        <span style="font-size: 11pt">{{ $row['ringkasan'] }}</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        <span style="font-size: 8pt">{{ $row['created_at'] }}</span>
+                                    </td>
+                                </tr>
+                            </table>
                         </div>
+                    <br><br>
                     @endforeach
-                </table>
             </div>
         </div>
     </div>

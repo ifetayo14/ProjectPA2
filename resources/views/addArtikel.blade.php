@@ -24,6 +24,9 @@
                                 <input type="text" name="link" class="form-control form-control-user" id="exampleFirstName" placeholder="Alamat Artikel">
                             </div>
                             <div class="form-group">
+                                <textarea type="" name="ringkasan" class="form-control" id="" placeholder="Ringkasan ±10 Kata" style="height: 200px"></textarea>
+                            </div>
+                            <div class="form-group">
                                 <input type="file" name="image" placeholder="Foto Artikel">
                             </div>
                             <br><br><br>

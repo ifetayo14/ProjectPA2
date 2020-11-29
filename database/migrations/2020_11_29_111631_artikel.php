@@ -17,6 +17,7 @@ class Artikel extends Migration
             $table->bigIncrements('id');
             $table->string('judul');
             $table->string('link');
+            $table->string('ringkasan');
             $table->mediumText('image');
             $table->timestamps();
         });
