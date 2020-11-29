@@ -46,31 +46,17 @@
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                             <tr>
-                                <th>#</th>
+                                <th style="width: 15px">#</th>
                                 <th>Judul</th>
                             </tr>
                             </thead>
                             <tbody>
+                            @foreach($dataTataIbadah as $row)
                                 <tr>
-                                    <td>1</td>
-                                    <td><a href="">Tata Ibadah Online 22 Maret 2020, Minggu Letare</a></td>
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td><a href="/detailTataIbadah/{{ $row['id'] }}" class="table-link">{{ $row['judul'] }}</a></td>
                                 </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td><a href="">Tata Ibadah Online 15 Maret 2020, Minggu Okuli</a></td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td><a href="">Tata Ibadah Online 08 Maret 2020, Minggu Reminiscere</a></td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td><a href="">Tata Ibadah Online 01 Maret 2020, Minggu Invocavit</a></td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td><a href="">Tata Ibadah Online 23 Februari 2020, Minggu Estomihi</a></td>
-                                </tr>
+                            @endforeach
 {{--                            @foreach($dataPengumuman as $row)--}}
 {{--                                <tr>--}}
 {{--                                    <td>{{ $loop->iteration }}</td>--}}

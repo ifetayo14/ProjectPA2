@@ -87,6 +87,18 @@ use Illuminate\Support\Facades\Session;
                 <span>Pengumuman</span></a>
         </li>
 
+        <li class="nav-item {{(request()->is('tataIbadah') ? 'active' : '')}}">
+            <a class="nav-link" href="{{url('tataIbadah')}}">
+                <i class="fas fa-fw fa-book"></i>
+                <span>Tata Ibadah</span></a>
+        </li>
+
+        <li class="nav-item {{(request()->is('artikelList') ? 'active' : '')}}">
+            <a class="nav-link" href="{{url('artikelList')}}">
+                <i class="fas fa-fw fa-newspaper"></i>
+                <span>Artikel</span></a>
+        </li>
+
         <!-- Divider -->
         <hr class="sidebar-divider">
 

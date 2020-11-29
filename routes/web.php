@@ -234,6 +234,20 @@ Route::post('/addPengumumanBaru', 'PengumumanController@store');
 Route::get('/detailPengumuman/{pengumuman}', 'PengumumanController@show');
 Route::delete('/pengumuman/{pengumuman}', 'PengumumanController@destroy');
 
+//TATAIBADAH
+Route::get('/tataIbadah', 'TataIbadahController@index');
+Route::get('/addTataIbadah', 'TataIbadahController@create');
+Route::post('/addNewTataIbadah', 'TataIbadahController@store');
+Route::get('/detailTataIbadah/{tataIbadah}', 'TataIbadahController@show');
+Route::delete('/tataIbadah/{tataIbadah}', 'TataIbadahController@destroy');
+
+//ARTIKEL
+Route::get('/artikelList', 'ArtikelController@index');
+Route::get('/addArtikel', 'ArtikelController@create');
+Route::post('/addNewArtikel', 'ArtikelController@store');
+//Route::get('/detailTataIbadah/{tataIbadah}', 'TataIbadahController@show');
+//Route::delete('/tataIbadah/{tataIbadah}', 'TataIbadahController@destroy');
+
     //Personalia
 Route::get('/pendetaPensiunPersonalia', 'PendetaPensiunPersonaliaController@index');
 Route::get('/addPendetaPensiunPersonalia', 'PendetaPensiunPersonaliaController@create');

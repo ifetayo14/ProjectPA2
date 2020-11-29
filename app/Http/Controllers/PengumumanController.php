@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Pengumuman;
+use App\TataIbadah;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -28,7 +29,8 @@ class PengumumanController extends Controller
     public function indexGereja()
     {
         $dataPengumuman = Pengumuman::all();
-        return view('/gerejaPage', compact('dataPengumuman'));
+        $dataTataIbadah = TataIbadah::all();
+        return view('/gerejaPage', ['dataPengumuman' => $dataPengumuman, 'dataTataIbadah' => $dataTataIbadah]);
     }
 
     /**
