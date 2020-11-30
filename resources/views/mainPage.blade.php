@@ -168,7 +168,7 @@
             <div class="item popular-item">
                 <div class="thumb">
                     <a href="{{ $row['link'] }}">
-                        <img src="{{ asset('uploads/artikel/' . $row -> image) }}" alt="">
+                        <img src="{{ asset('uploads/artikel/' . $row -> image) }}" alt="" style="height: 230px">
                         <div class="text-content">
                             <h4>{{ $row['judul'] }}</h4>
                         </div>
