@@ -13,6 +13,7 @@ class Artikel extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists(table('artikel'));
         Schema::create('artikel', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('judul');
