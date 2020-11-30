@@ -13,10 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function (){
-    return view('mainPage');
-});
-
 Route::post('/loginValidation', 'AuthController@login');
 
 Route::get('/logout', 'AuthController@logout');
@@ -71,10 +67,6 @@ Route::get('/editProfile', function () {
 
 Route::get('/pengumumanJemaat', function() {
     return view('pengumumanJemaat');
-});
-
-Route::get('/detailPengumumanJemaat',function (){
-    return view('detailPengumumanJemaat');
 });
 
 //DATA GEREJA JEMAAT
@@ -235,16 +227,28 @@ Route::get('/detailPengumuman/{pengumuman}', 'PengumumanController@show');
 Route::delete('/pengumuman/{pengumuman}', 'PengumumanController@destroy');
 
 //TATAIBADAH
+Route::get('/tataIbadahList', 'TataIbadahController@indexList');
+Route::get('/tataIbadahPersonalia', 'TataIbadahController@indexListPersonalia');
 Route::get('/tataIbadah', 'TataIbadahController@index');
 Route::get('/addTataIbadah', 'TataIbadahController@create');
 Route::post('/addNewTataIbadah', 'TataIbadahController@store');
+Route::get('/addTataIbadahPersonalia', 'TataIbadahController@createPersonalia');
+Route::post('/addNewTataIbadahPersonalia', 'TataIbadahController@storePersonalia');
 Route::get('/detailTataIbadah/{tataIbadah}', 'TataIbadahController@show');
+Route::get('/detailTataIbadahPersonalia/{tataIbadah}', 'TataIbadahController@showPersonalia');
+Route::get('/detailTataIbadahJemaat/{tataIbadah}', 'TataIbadahController@showJemaat');
 Route::delete('/tataIbadah/{tataIbadah}', 'TataIbadahController@destroy');
+Route::delete('/tataIbadahPersonalia/{tataIbadah}', 'TataIbadahController@destroyPersonalia');
 
 //ARTIKEL
+Route::get('/artikel', 'ArtikelController@indexJemaat');
+Route::get('/', 'ArtikelController@indexJemaatHome');
 Route::get('/artikelList', 'ArtikelController@index');
+Route::get('/artikelListPersonalia', 'ArtikelController@indexPersonalia');
 Route::get('/addArtikel', 'ArtikelController@create');
 Route::post('/addNewArtikel', 'ArtikelController@store');
+Route::get('/addArtikelPersonalia', 'ArtikelController@createPersonalia');
+Route::post('/addNewArtikelPersonalia', 'ArtikelController@storePersonalia');
 //Route::get('/detailTataIbadah/{tataIbadah}', 'TataIbadahController@show');
 //Route::delete('/tataIbadah/{tataIbadah}', 'TataIbadahController@destroy');
 
@@ -257,9 +261,3 @@ Route::delete('/detailPendetaPensiunPersonalia/{pendetaPensiun}', 'PendetaPensiu
 Route::get('/editPensiunPersonalia/{pendetaPensiun}', 'PendetaPensiunPersonaliaController@edit');
 Route::patch('/updatePensiunPersonalia/{pendetaPensiun}', 'PendetaPensiunPersonaliaController@update');
 
-//Route::get('/detailPengumumanJemaat','PengumumanController');
-
-//Artikel
-Route::get('/artikel', function () {
-    return view('artikel');
-});

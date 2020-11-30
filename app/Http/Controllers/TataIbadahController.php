@@ -18,6 +18,18 @@ class TataIbadahController extends Controller
         return view('tataIbadah', compact('tataIbadah'));
     }
 
+    public function indexList()
+    {
+        $tataIbadah = TataIbadah::all();
+        return view('tataIbadahList', compact('tataIbadah'));
+    }
+
+    public function indexListPersonalia()
+    {
+        $tataIbadah = TataIbadah::all();
+        return view('tataIbadahPersonalia', compact('tataIbadah'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -26,6 +38,11 @@ class TataIbadahController extends Controller
     public function create()
     {
         return view('addTataIbadah');
+    }
+
+    public function createPersonalia()
+    {
+        return view('addTataIbadahPersonalia');
     }
 
     /**
@@ -50,6 +67,22 @@ class TataIbadahController extends Controller
         return redirect('/tataIbadah')->with('success', 'Data Ditambah');
     }
 
+    public function storePersonalia(Request $request)
+    {
+        $this->validate($request, [
+            'judul' => 'required',
+            'isi' => 'required'
+        ]);
+
+        $tataIbadah = new TataIbadah([
+            'judul' => $request->get('judul'),
+            'isi' => $request->get('isi')
+        ]);
+
+        $tataIbadah->save();
+        return redirect('/tataIbadahPersonalia')->with('success', 'Data Ditambah');
+    }
+
     /**
      * Display the specified resource.
      *
@@ -59,6 +92,16 @@ class TataIbadahController extends Controller
     public function show(TataIbadah $tataIbadah)
     {
         return view('detailTataIbadah', compact('tataIbadah'));
+    }
+
+    public function showJemaat(TataIbadah $tataIbadah)
+    {
+        return view('detailTataIbadahJemaat', compact('tataIbadah'));
+    }
+
+    public function showPersonalia(TataIbadah $tataIbadah)
+    {
+        return view('detailTataIbadahPersonalia', compact('tataIbadah'));
     }
 
     /**
@@ -94,5 +137,11 @@ class TataIbadahController extends Controller
     {
         TataIbadah::destroy($tataIbadah->id);
         return redirect('/tataIbadah ')->with('success', 'Data Dihapus');
+    }
+
+    public function destroyPersonalia(TataIbadah $tataIbadah)
+    {
+        TataIbadah::destroy($tataIbadah->id);
+        return redirect('/tataIbadahPersonalia ')->with('success', 'Data Dihapus');
     }
 }

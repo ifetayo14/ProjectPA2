@@ -20,6 +20,24 @@ class ArtikelController extends Controller
         return view('artikelList', compact('dataArtikel'));
     }
 
+    public function indexPersonalia()
+    {
+        $dataArtikel = Artikel::all();
+        return view('artikelListPersonalia', compact('dataArtikel'));
+    }
+
+    public function indexJemaat()
+    {
+        $dataArtikel = Artikel::all();
+        return view('artikel', compact('dataArtikel'));
+    }
+
+    public function indexJemaatHome()
+    {
+        $dataArtikel = Artikel::all();
+        return view('mainPage', compact('dataArtikel'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -28,6 +46,11 @@ class ArtikelController extends Controller
     public function create()
     {
         return view('addArtikel');
+    }
+
+    public function createPersonalia()
+    {
+        return view('addArtikelPersonalia');
     }
 
     /**
@@ -52,6 +75,24 @@ class ArtikelController extends Controller
         $artikel -> save();
 
         return redirect('/artikelList')->with('success', 'Data Ditambah');
+    }
+
+    public function storePersonalia(Request $request)
+    {
+        $artikel = new Artikel();
+        $artikel->judul = $request->input('judul');
+        $artikel->link = $request->input('link');
+        $artikel->ringkasan = $request->input('ringkasan');
+
+        $file = $request->file('image');
+        $extension = $file->getClientOriginalExtension(); // ngambil extension foto
+        $filename = time() . '.' . $extension;
+        $file -> move('uploads/artikel/', $filename);
+        $artikel -> image = $filename;
+
+        $artikel -> save();
+
+        return redirect('/artikelListPersonalia')->with('success', 'Data Ditambah');
     }
 
     /**

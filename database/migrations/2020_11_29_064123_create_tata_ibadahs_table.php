@@ -16,7 +16,7 @@ class CreateTataIbadahsTable extends Migration
         Schema::create('tata_ibadahs', function (Blueprint $table) {
             $table->id();
             $table->string('judul');
-            $table->string('isi');
+            $table->longText('isi');
             $table->timestamps();
         });
     }

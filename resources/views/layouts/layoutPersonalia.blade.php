@@ -33,8 +33,10 @@ use Illuminate\Support\Facades\Session;
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{url('indexPersonalia')}}">
-            <div class="sidebar-brand-text mx-3">Sistem Kepegawaian Gereja</div>
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{url('/indexPersonalia')}}">
+            <div class="sidebar-brand-text mx-3">
+                <img src="{{ url('templ/img/logoApp.png')}}" alt="" style="width: 245px">
+            </div>
         </a>
 
         <!-- Divider -->
@@ -47,24 +49,24 @@ use Illuminate\Support\Facades\Session;
                 <span>Dashboard</span></a>
         </li>
 
-        <li class="nav-item {{(request()->is('dataPersonalia') ? 'active' : '')}}">
-            <a class="nav-link" href="{{url('dataPersonalia')}}">
-                <i class="fas fa-fw fa-church"></i>
-                <span>Data Gereja</span></a>
-        </li>
+{{--        <li class="nav-item {{(request()->is('dataPersonalia') ? 'active' : '')}}">--}}
+{{--            <a class="nav-link" href="{{url('dataPersonalia')}}">--}}
+{{--                <i class="fas fa-fw fa-church"></i>--}}
+{{--                <span>Data Gereja</span></a>--}}
+{{--        </li>--}}
 
-        <li class="nav-item {{(request()->is('pendetaAktifPersonalia') ? 'active' : '')}}">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-                <i class="fas fa-fw fa-bible"></i>
-                <span>Data Pendeta</span>
-            </a>
-            <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="{{url('pendetaAktifPersonalia')}}">Pendeta Aktif</a>
-                    <a class="collapse-item" href="{{url('pendetaPensiunPersonalia')}}">Pendeta Pensiun</a>
-                </div>
-            </div>
-        </li>
+{{--        <li class="nav-item {{(request()->is('pendetaAktifPersonalia') ? 'active' : '')}}">--}}
+{{--            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">--}}
+{{--                <i class="fas fa-fw fa-bible"></i>--}}
+{{--                <span>Data Pendeta</span>--}}
+{{--            </a>--}}
+{{--            <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">--}}
+{{--                <div class="bg-white py-2 collapse-inner rounded">--}}
+{{--                    <a class="collapse-item" href="{{url('pendetaAktifPersonalia')}}">Pendeta Aktif</a>--}}
+{{--                    <a class="collapse-item" href="{{url('pendetaPensiunPersonalia')}}">Pendeta Pensiun</a>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </li>--}}
 
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item {{(request()->is('kasPersonalia') ? 'active' : '')}} {{(request()->is('kolektePersonalia') ? 'active' : '')}}">
@@ -84,6 +86,18 @@ use Illuminate\Support\Facades\Session;
             <a class="nav-link" href="{{url('pengumumanPersonalia')}}">
                 <i class="fas fa-fw fa-bullhorn"></i>
                 <span>Pengumuman</span></a>
+        </li>
+
+        <li class="nav-item {{(request()->is('tataIbadahPersonalia') ? 'active' : '')}}">
+            <a class="nav-link" href="{{url('tataIbadahPersonalia')}}">
+                <i class="fas fa-fw fa-book"></i>
+                <span>Tata Ibadah</span></a>
+        </li>
+
+        <li class="nav-item {{(request()->is('artikelListPersonalia') ? 'active' : '')}}">
+            <a class="nav-link" href="{{url('artikelListPersonalia')}}">
+                <i class="fas fa-fw fa-newspaper"></i>
+                <span>Artikel</span></a>
         </li>
 
         <!-- Divider -->
@@ -114,55 +128,6 @@ use Illuminate\Support\Facades\Session;
                 <!-- Topbar Navbar -->
                 <ul class="navbar-nav ml-auto">
 
-                    <!-- Nav Item - Alerts -->
-                    <li class="nav-item dropdown no-arrow mx-1">
-                        <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-bell fa-fw"></i>
-                            <!-- Counter - Alerts -->
-                            <span class="badge badge-danger badge-counter">3+</span>
-                        </a>
-                        <!-- Dropdown - Alerts -->
-                        <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
-                            <h6 class="dropdown-header">
-                                PEMBERITAHUAN
-                            </h6>
-                            <a class="dropdown-item d-flex align-items-center" href="#">
-                                <div class="mr-3">
-                                    <div class="icon-circle bg-primary">
-                                        <i class="fas fa-file-alt text-white"></i>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="small text-gray-500">December 12, 2019</div>
-                                    <span class="font-weight-bold">Laporan Bulanan Gereja</span>
-                                </div>
-                            </a>
-                            <a class="dropdown-item d-flex align-items-center" href="#">
-                                <div class="mr-3">
-                                    <div class="icon-circle bg-success">
-                                        <i class="fas fa-donate text-white"></i>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="small text-gray-500">December 7, 2019</div>
-                                    Laporan Pemasukan Kas dan Uang Kolekte
-                                </div>
-                            </a>
-                            <a class="dropdown-item d-flex align-items-center" href="#">
-                                <div class="mr-3">
-                                    <div class="icon-circle bg-warning">
-                                        <i class="fas fa-exclamation-triangle text-white"></i>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="small text-gray-500">December 2, 2019</div>
-                                    Pengingat Pendeta dan Staff Pensiun Bulan Ini
-                                </div>
-                            </a>
-                            <a class="dropdown-item text-center small text-gray-500" href="#">SELENGKAPNYA</a>
-                        </div>
-                    </li>
-
                     <div class="topbar-divider d-none d-sm-block"></div>
 
                     <!-- Nav Item - User Information -->
@@ -178,7 +143,7 @@ use Illuminate\Support\Facades\Session;
                                 Profil
                             </a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{url('index')}}">
+                            <a class="dropdown-item" href="{{url('logout')}}">
                                 <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Logout
                             </a>
@@ -205,7 +170,7 @@ use Illuminate\Support\Facades\Session;
         <footer class="sticky-footer bg-white">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>COPYRIGHT &copy; KELOMPOK 10 PA 2 2020</span>
+                    <span>COPYRIGHT © KELOMPOK 10 KREN 2020</span>
                 </div>
             </div>
         </footer>

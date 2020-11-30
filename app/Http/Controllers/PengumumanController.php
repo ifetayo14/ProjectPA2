@@ -76,6 +76,12 @@ class PengumumanController extends Controller
         return view('detailPengumuman', compact('pengumuman'));
     }
 
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Pengumuman  $pengumuman
+     * @return \Illuminate\Http\Response
+     */
     public function showJemaat(Pengumuman $pengumuman)
     {
         return view('detailPengumumanJemaat', compact('pengumuman'));

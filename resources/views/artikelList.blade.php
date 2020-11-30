@@ -32,7 +32,7 @@
                                 <tr>
                                     <td rowspan="4"><img src="{{ asset('uploads/artikel/' . $row -> image) }}" alt="" style="width: 250px; height: 150px"></td>
                                     <td></td>
-                                    <td style="font-size: 14pt"><a href="">{{ $row['judul'] }}</a></td>
+                                    <td style="font-size: 14pt"><a href="{{ $row['link'] }}">{{ $row['judul'] }}</a></td>
                                 </tr>
                                 <tr>
                                     <td style="color: #FFF">...</td>

@@ -7,6 +7,13 @@
 @section('main-content')
 <section class="featured-places" id="blog">
     <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <span>PENGUMUMAN</span>
+                </div>
+            </div>
+        </div>
 
         <div class="card shadow mb-4">
             @if($message = Session::get('success'))

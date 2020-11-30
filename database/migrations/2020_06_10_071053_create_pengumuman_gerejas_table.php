@@ -16,7 +16,7 @@ class CreatePengumumanGerejasTable extends Migration
         Schema::create('pengumuman', function (Blueprint $table) {
             $table->id();
             $table->string('judul');
-            $table->string('isi');
+            $table->longText('isi');
             $table->timestamps();
         });
     }
