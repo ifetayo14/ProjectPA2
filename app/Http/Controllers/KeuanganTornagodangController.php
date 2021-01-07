@@ -18,6 +18,12 @@ class KeuanganTornagodangController extends Controller
         return view('keuanganTornagodang', compact('dataKeuangan'));
     }
 
+    public function indexPersonalia()
+    {
+        $dataKeuangan = KeuanganTornagodang::all();
+        return view('keuanganTornagodangPersonalia', compact('dataKeuangan'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -49,7 +55,7 @@ class KeuanganTornagodangController extends Controller
         ]);
 
         $dataKeuangan->save();
-        return redirect('/keuanganTornagodang')->with('success', 'Data Ditambah');
+        return redirect('/keuanganTornagodangPersonalia')->with('success', 'Data Ditambah');
     }
 
     /**
@@ -95,7 +101,7 @@ class KeuanganTornagodangController extends Controller
             'pengeluaran' => $request->pengeluaran,
         ]);
 
-        return redirect('/keuanganTornagodang ')->with('success', 'Data Diubah');
+        return redirect('/keuanganTornagodangPersonalia ')->with('success', 'Data Diubah');
     }
 
     /**
@@ -107,6 +113,6 @@ class KeuanganTornagodangController extends Controller
     public function destroy(KeuanganTornagodang $keuanganTornagodang)
     {
         KeuanganTornagodang::destroy($keuanganTornagodang->id);
-        return redirect('/keuanganTornagodang ')->with('success', 'Data Dihapus');
+        return redirect('/keuanganTornagodangPersonalia ')->with('success', 'Data Dihapus');
     }
 }

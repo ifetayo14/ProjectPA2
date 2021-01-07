@@ -324,3 +324,5 @@ Route::post('/storeJemaatTornagodangPersonalia', 'JemaatTornagodangController@st
 Route::delete('/deleteJemaatTornagodangPersonalia/{jemaatTornagodangPersonalia}', 'JemaatTornagodangController@destroyPersonalia');
 Route::get('/editJemaatTornagodangPersonalia/{jemaatTornagodangPersonalia}', 'JemaatTornagodangController@editPersonalia');
 Route::patch('/updateJemaatTornagodangPersonalia/{jemaatTornagodangPersonalia}', 'JemaatTornagodangController@updatePersonalia');
+
+Route::get('/keuanganTornagodangPersonalia', 'KeuanganTornagodangController@indexPersonalia');

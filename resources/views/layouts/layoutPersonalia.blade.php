@@ -69,15 +69,17 @@ use Illuminate\Support\Facades\Session;
 {{--        </li>--}}
 
         <li class="nav-item {{(request()->is('jemaatTornagodangPersonalia') ? 'active' : '')}} {{(request()->is('jemaatPardomuanPersonalia') ? 'active' : '')}} {{(request()->is('jemaatSibosurPersonalia') ? 'active' : '')}} {{(request()->is('jemaatMatioPersonalia') ? 'active' : '')}}">
-            <a class="nav-link" href="{{ (request()->is('personaliaTornagodang') ? 'jemaatTornagodangPersonalia' : '') }} {{ (request()->is('personaliaPardomuan') ? 'jemaatPardomuanPersonalia' : '') }} {{ (request()->is('personaliaSibosur') ? 'jemaatSibosurPersonalia' : '') }} {{ (request()->is('personaliaMatio') ? 'jemaatMatioPersonalia' : '') }}">
+{{--            <a class="nav-link" href="{{ (request()->is('personaliaTornagodang') ? 'jemaatTornagodangPersonalia' : '') }} {{ (request()->is('personaliaPardomuan') ? 'jemaatPardomuanPersonalia' : '') }} {{ (request()->is('personaliaSibosur') ? 'jemaatSibosurPersonalia' : '') }} {{ (request()->is('personaliaMatio') ? 'jemaatMatioPersonalia' : '') }}">--}}
+            <a class="nav-link" href="jemaatTornagodangPersonalia">
                 <i class="fas fa-fw fa-users"></i>
                 <span>Jemaat</span>
             </a>
         </li>
 
         <li class="nav-item {{(request()->is('keuanganTornagodangPersonalia') ? 'active' : '')}} {{(request()->is('keuanganPardomuanPersonalia') ? 'active' : '')}} {{(request()->is('keuanganSibosurPersonalia') ? 'active' : '')}} {{(request()->is('keuanganMatioPersonalia') ? 'active' : '')}}">
-            <a class="nav-link" href="{{ (request()->is('personaliaTornagodang') ? 'keuanganTornagodangPersonalia' : '') }} {{ (request()->is('personaliaPardomuan') ? 'keuanganPardomuanPersonalia' : '') }} {{ (request()->is('personaliaSibosur') ? 'keuanganSibosurPersonalia' : '') }} {{ (request()->is('personaliaMatio') ? 'keuanganMatioPersonalia' : '') }}">
-                <i class="fas fa-fw fa-dollar-sign"></i>
+{{--            <a class="nav-link" href="{{ (request()->is('personaliaTornagodang') ? 'keuanganTornagodangPersonalia' : '') }} {{ (request()->is('personaliaPardomuan') ? 'keuanganPardomuanPersonalia' : '') }} {{ (request()->is('personaliaSibosur') ? 'keuanganSibosurPersonalia' : '') }} {{ (request()->is('personaliaMatio') ? 'keuanganMatioPersonalia' : '') }}">--}}
+            <a class="nav-link" href="keuanganTornagodangPersonalia">
+            <i class="fas fa-fw fa-dollar-sign"></i>
                 <span>Keuangan</span>
             </a>
         </li>
