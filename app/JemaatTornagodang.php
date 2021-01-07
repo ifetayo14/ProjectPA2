@@ -8,5 +8,5 @@ class JemaatTornagodang extends Model
 {
     protected $fillable = ['nama', 'gender', 'alamat', 'umur'];
 
-    protected $table = 'jemaattornagodangs';
+    protected $table = 'jemaat_tornagodangs';
 }

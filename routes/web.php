@@ -125,7 +125,7 @@ Route::get('/pengumumanPersonalia', 'PengumumanPersonaliaController@index');
 Route::get('/addPengumumanPersonalia', 'PengumumanPersonaliaController@create');
 Route::post('pengumumanGereja', 'PengumumanPersonaliaController@store');
 Route::get('/detailPengumumanPersonalia/{pengumumanGereja}', 'PengumumanPersonaliaController@show');
-Route::delete('/detailPengumumanPersonalia/{pengumumanGereja}', 'PengumumanPersonaliaController@destroy');
+Route::delete('/detailPengumumanPersonalia/{pengumuman}', 'PengumumanPersonaliaController@destroy');
 Route::get('/editPengumumanGerejaPersonalia/{pengumumanGereja}', 'PengumumanPersonaliaController@edit');
 Route::patch('/updatePengumumanGerejaPersonalia/{pengumumanGereja}', 'PengumumanPersonaliaController@update');
 Route::get('/detailPengumumanPersonaliaIndex/{pengumumanGereja}', 'PengumumanPersonaliaController@showIndex');

@@ -13,7 +13,7 @@ class CreateJemaatTornagodangsTable extends Migration
      */
     public function up()
     {
-        Schema::create('jemaattornagodangs', function (Blueprint $table) {
+        Schema::create('jemaat_tornagodangs', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
             $table->string('gender');
@@ -30,6 +30,6 @@ class CreateJemaatTornagodangsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('jemaatTornagodangs');
+        Schema::dropIfExists('jemaat_tornagodangs');
     }
 }

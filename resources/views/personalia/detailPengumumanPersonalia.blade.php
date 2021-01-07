@@ -15,7 +15,7 @@
             <hr style="background-color: gray; height: 0.6pt; margin-left: 2pt; margin-right: 2pt;">
 
             <div class="pengContent">
-                Shalom,di beritahukan bahwa :<br>
+                Shalom, di beritahukan bahwa :<br>
 
                 {!!$pengumuman -> isi!!}
                 <br>
