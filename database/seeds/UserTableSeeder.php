@@ -26,9 +26,27 @@ class UserTableSeeder extends Seeder
         ]);
         DB::table('user')->insert([
             'id' => '3',
-            'username' => 'person123',
+            'username' => 'personaliaTornagodang',
             'password' => 'pass123',
-            'role' => 'personalia'
+            'role' => 'personaliaTornagodang'
+        ]);
+        DB::table('user')->insert([
+            'id' => '4',
+            'username' => 'personaliaSibosur',
+            'password' => 'pass123',
+            'role' => 'personaliaSibosur'
+        ]);
+        DB::table('user')->insert([
+            'id' => '5',
+            'username' => 'personaliaMatio',
+            'password' => 'pass123',
+            'role' => 'personaliaMatio'
+        ]);
+        DB::table('user')->insert([
+            'id' => '6',
+            'username' => 'personaliaPardomuan',
+            'password' => 'pass123',
+            'role' => 'personaliaPardomuan'
         ]);
     }
 }

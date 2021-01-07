@@ -26,6 +26,30 @@ class PengumumanPersonaliaController extends Controller
          return view('personalia.indexPersonalia',compact('pengumuman'));
      }
 
+    public function personaliaTornagodang()
+    {
+        $pengumuman = Pengumuman::all();
+        return view('personaliaTornagodang',compact('pengumuman'));
+    }
+
+    public function personaliaPardomuan()
+    {
+        $pengumuman = Pengumuman::all();
+        return view('personaliaPardomuan',compact('pengumuman'));
+    }
+
+    public function personaliaSibosur()
+    {
+        $pengumuman = Pengumuman::all();
+        return view('personaliaSibosur',compact('pengumuman'));
+    }
+
+    public function personaliaMatio()
+    {
+        $pengumuman = Pengumuman::all();
+        return view('personaliaMatio',compact('pengumuman'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

@@ -43,8 +43,8 @@ use Illuminate\Support\Facades\Session;
         <hr class="sidebar-divider my-0">
 
         <!-- Nav Item - Dashboard -->
-        <li class="nav-item {{(request()->is('indexPersonalia') ? 'active' : '')}}">
-            <a class="nav-link" href="{{url('indexPersonalia')}}">
+        <li class="nav-item {{(request()->is('personaliaTornagodang') ? 'active' : '')}}">
+            <a class="nav-link" href="{{url('personaliaTornagodang')}}">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
         </li>
@@ -68,18 +68,18 @@ use Illuminate\Support\Facades\Session;
 {{--            </div>--}}
 {{--        </li>--}}
 
-        <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item {{(request()->is('kasPersonalia') ? 'active' : '')}} {{(request()->is('kolektePersonalia') ? 'active' : '')}}">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+        <li class="nav-item {{(request()->is('jemaatTornagodangPersonalia') ? 'active' : '')}} {{(request()->is('jemaatPardomuanPersonalia') ? 'active' : '')}} {{(request()->is('jemaatSibosurPersonalia') ? 'active' : '')}} {{(request()->is('jemaatMatioPersonalia') ? 'active' : '')}}">
+            <a class="nav-link" href="{{ (request()->is('personaliaTornagodang') ? 'jemaatTornagodangPersonalia' : '') }} {{ (request()->is('personaliaPardomuan') ? 'jemaatPardomuanPersonalia' : '') }} {{ (request()->is('personaliaSibosur') ? 'jemaatSibosurPersonalia' : '') }} {{ (request()->is('personaliaMatio') ? 'jemaatMatioPersonalia' : '') }}">
+                <i class="fas fa-fw fa-users"></i>
+                <span>Jemaat</span>
+            </a>
+        </li>
+
+        <li class="nav-item {{(request()->is('keuanganTornagodangPersonalia') ? 'active' : '')}} {{(request()->is('keuanganPardomuanPersonalia') ? 'active' : '')}} {{(request()->is('keuanganSibosurPersonalia') ? 'active' : '')}} {{(request()->is('keuanganMatioPersonalia') ? 'active' : '')}}">
+            <a class="nav-link" href="{{ (request()->is('personaliaTornagodang') ? 'keuanganTornagodangPersonalia' : '') }} {{ (request()->is('personaliaPardomuan') ? 'keuanganPardomuanPersonalia' : '') }} {{ (request()->is('personaliaSibosur') ? 'keuanganSibosurPersonalia' : '') }} {{ (request()->is('personaliaMatio') ? 'keuanganMatioPersonalia' : '') }}">
                 <i class="fas fa-fw fa-dollar-sign"></i>
                 <span>Keuangan</span>
             </a>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="{{url('kasPersonalia')}}">Kas</a>
-                    <a class="collapse-item" href="{{url('kolektePersonalia')}}">Kolekte</a>
-                </div>
-            </div>
         </li>
 
         <li class="nav-item {{(request()->is('pengumumanPersonalia') ? 'active' : '')}}">

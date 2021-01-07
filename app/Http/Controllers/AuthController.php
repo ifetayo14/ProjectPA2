@@ -20,11 +20,29 @@ class AuthController extends Controller
 
                 return redirect('/indexAdministrator');
             }
-            elseif ($data->role=="personalia") {
+            elseif ($data->role=="personaliaTornagodang") {
                 $request->session()->put('username', $data->username);
                 $request->session()->put('role', $data->role);
 
-                return redirect('/indexPersonalia');
+                return redirect('/personaliaTornagodang');
+            }
+            elseif ($data->role=="personaliaPardomuan") {
+                $request->session()->put('username', $data->username);
+                $request->session()->put('role', $data->role);
+
+                return redirect('/personaliaPardomuan');
+            }
+            elseif ($data->role=="personaliaSibosur") {
+                $request->session()->put('username', $data->username);
+                $request->session()->put('role', $data->role);
+
+                return redirect('/personaliaSibosur');
+            }
+            elseif ($data->role=="personaliaMatio") {
+                $request->session()->put('username', $data->username);
+                $request->session()->put('role', $data->role);
+
+                return redirect('/personaliaMatio');
             }
         }
         return redirect('/index')->with('error', 'Username atau Password Anda Salah');

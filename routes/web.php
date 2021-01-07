@@ -19,7 +19,10 @@ Route::get('/logout', 'AuthController@logout');
 
 Route::get('/indexAdministrator', 'PagesController@indexAdmin');
 
-Route::get('/indexPersonalia', 'PagesController@indexPersonalia');
+//Route::get('/personaliaTornagodang', 'PagesController@personaliaTornagodang');
+//Route::get('/personaliaPardomuan', 'PagesController@personaliaPardomuan');
+//Route::get('/personaliaSibosur', 'PagesController@personaliaSibosur');
+//Route::get('/personaliaMatio', 'PagesController@personaliaMatio');
 
 Route::get('/indexPendeta', 'PagesController@indexPendeta');
 
@@ -114,7 +117,10 @@ Route::patch('/updateKasGerejaPendeta/{kasGereja}', 'KasGerejaPendetaController@
 
 //PENGUMUMAN GEREJA
     //Personalia
-Route::get('/indexPersonalia', 'PengumumanPersonaliaController@dashboard');
+Route::get('/personaliaTornagodang', 'PengumumanPersonaliaController@personaliaTornagodang');
+Route::get('/personaliaPardomuan', 'PengumumanPersonaliaController@personaliaPardomuan');
+Route::get('/personaliaSibosur', 'PengumumanPersonaliaController@personaliaSibosur');
+Route::get('/personaliaMatio', 'PengumumanPersonaliaController@personaliaMatio');
 Route::get('/pengumumanPersonalia', 'PengumumanPersonaliaController@index');
 Route::get('/addPengumumanPersonalia', 'PengumumanPersonaliaController@create');
 Route::post('pengumumanGereja', 'PengumumanPersonaliaController@store');
@@ -261,3 +267,60 @@ Route::delete('/detailPendetaPensiunPersonalia/{pendetaPensiun}', 'PendetaPensiu
 Route::get('/editPensiunPersonalia/{pendetaPensiun}', 'PendetaPensiunPersonaliaController@edit');
 Route::patch('/updatePensiunPersonalia/{pendetaPensiun}', 'PendetaPensiunPersonaliaController@update');
 
+//JEMAAT
+Route::get('/jemaatTornagodang', 'JemaatTornagodangController@index');
+Route::get('/addJemaatTornagodang', 'JemaatTornagodangController@create');
+Route::post('/storeJemaatTornagodang', 'JemaatTornagodangController@store');
+Route::delete('/deleteJemaatTornagodang/{jemaatTornagodang}', 'JemaatTornagodangController@destroy');
+Route::get('/editJemaatTornagodang/{jemaatTornagodang}', 'JemaatTornagodangController@edit');
+Route::patch('/updateJemaatTornagodang/{jemaatTornagodang}', 'JemaatTornagodangController@update');
+
+Route::get('/jemaatMatio', 'JemaatMatioController@index');
+Route::get('/addJemaatMatio', 'JemaatMatioController@create');
+Route::post('/storeJemaatMatio', 'JemaatMatioController@store');
+Route::delete('/deleteJemaatMatio/{jemaatMatio}', 'JemaatMatioController@destroy');
+Route::get('/editJemaatMatio/{jemaatMatio}', 'JemaatMatioController@edit');
+Route::patch('/updateJemaatMatio/{jemaatMatio}', 'JemaatMatioController@update');
+
+Route::get('/jemaatPardomuan', 'JemaatPardomuanController@index');
+Route::get('/addJemaatPardomuan', 'JemaatPardomuanController@create');
+Route::post('/storeJemaatPardomuan', 'JemaatPardomuanController@store');
+Route::delete('/deleteJemaatPardomuan/{jemaatPardomuan}', 'JemaatPardomuanController@destroy');
+Route::get('/editJemaatPardomuan/{jemaatPardomuan}', 'JemaatPardomuanController@edit');
+Route::patch('/updateJemaatPardomuan/{jemaatPardomuan}', 'JemaatPardomuanController@update');
+
+Route::get('/jemaatSibosur', 'JemaatSibosurController@index');
+Route::get('/addJemaatSibosur', 'JemaatSibosurController@create');
+Route::post('/storeJemaatSibosur', 'JemaatSibosurController@store');
+Route::delete('/deleteJemaatSibosur/{jemaatSibosur}', 'JemaatSibosurController@destroy');
+Route::get('/editJemaatSibosur/{jemaatSibosur}', 'JemaatSibosurController@edit');
+Route::patch('/updateJemaatSibosur/{jemaatSibosur}', 'JemaatSibosurController@update');
+
+//KEUANGAN
+Route::get('/keuanganTornagodang', 'KeuanganTornagodangController@index');
+Route::get('/addKeuanganTornagodang', 'KeuanganTornagodangController@create');
+Route::post('/storeKeuanganTornagodang', 'KeuanganTornagodangController@store');
+Route::delete('/deleteKeuanganTornagodang/{keuanganTornagodang}', 'KeuanganTornagodangController@destroy');
+
+Route::get('/keuanganPardomuan', 'KeuanganPardomuanController@index');
+Route::get('/addKeuanganPardomuan', 'KeuanganPardomuanController@create');
+Route::post('/storeKeuanganPardomuan', 'KeuanganPardomuanController@store');
+Route::delete('/deleteKeuanganPardomuan/{keuanganPardomuan}', 'KeuanganPardomuanControllers@destroy');
+
+Route::get('/keuanganMatio', 'KeuanganMatioController@index');
+Route::get('/addKeuanganMatio', 'KeuanganMatioController@create');
+Route::post('/storeKeuanganMatio', 'KeuanganMatioController@store');
+Route::delete('/deleteKeuanganMatio/{keuanganMatio}', 'KeuanganMatioController@destroy');
+
+Route::get('/keuanganSibosur', 'KeuanganSibosurController@index');
+Route::get('/addKeuanganSibosur', 'KeuanganSibosurController@create');
+Route::post('/storeKeuanganSibosur', 'KeuanganSibosurController@store');
+Route::delete('/deleteKeuanganSibosur/{keuanganSibosur}', 'KeuanganSibosurController@destroy');
+
+//Personali v2
+Route::get('/jemaatTornagodangPersonalia', 'JemaatTornagodangController@indexPersonalia');
+Route::get('/addJemaatTornagodangPersonalia', 'JemaatTornagodangController@createPersonalia');
+Route::post('/storeJemaatTornagodangPersonalia', 'JemaatTornagodangController@storePersonalia');
+Route::delete('/deleteJemaatTornagodangPersonalia/{jemaatTornagodangPersonalia}', 'JemaatTornagodangController@destroyPersonalia');
+Route::get('/editJemaatTornagodangPersonalia/{jemaatTornagodangPersonalia}', 'JemaatTornagodangController@editPersonalia');
+Route::patch('/updateJemaatTornagodangPersonalia/{jemaatTornagodangPersonalia}', 'JemaatTornagodangController@updatePersonalia');

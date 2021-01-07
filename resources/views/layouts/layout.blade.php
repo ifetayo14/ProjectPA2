@@ -48,35 +48,54 @@ use Illuminate\Support\Facades\Session;
                 <span>Dashboard</span></a>
         </li>
 
-        <li class="nav-item {{(request()->is('dataGereja') ? 'active' : '')}}">
-            <a class="nav-link" href="{{url('dataGereja')}}">
-                <i class="fas fa-fw fa-church"></i>
-                <span>Data Gereja</span></a>
-        </li>
+{{--        <li class="nav-item {{(request()->is('dataGereja') ? 'active' : '')}}">--}}
+{{--            <a class="nav-link" href="{{url('dataGereja')}}">--}}
+{{--                <i class="fas fa-fw fa-church"></i>--}}
+{{--                <span>Data Gereja</span></a>--}}
+{{--        </li>--}}
 
-        <li class="nav-item {{(request()->is('pendetaAktif') ? 'active' : '')}} {{(request()->is('pendetaPensiun') ? 'active' : '')}}">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-                <i class="fas fa-fw fa-bible"></i>
-                <span>Data Pendeta</span>
+        <li class="nav-item {{(request()->is('jemaatTornagodang') ? 'active' : '')}} {{(request()->is('jemaatPardomuan') ? 'active' : '')}} {{(request()->is('jemaatSibosur') ? 'active' : '')}} {{(request()->is('jemaatMatio') ? 'active' : '')}}">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseJemaat" aria-expanded="true" aria-controls="collapseUtilities">
+                <i class="fas fa-fw fa-users"></i>
+                <span>Jemaat</span>
             </a>
-            <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div id="collapseJemaat" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="{{url('pendetaAktif')}}">Pendeta Aktif</a>
-                    <a class="collapse-item" href="{{url('pendetaPensiun')}}">Pendeta Pensiun</a>
+                    <a class="collapse-item" href="{{url('jemaatTornagodang')}}">HKBP Tornagodang</a>
+                    <a class="collapse-item" href="{{url('jemaatPardomuan')}}">HKBP Pardomuan</a>
+                    <a class="collapse-item" href="{{url('jemaatSibosur')}}">HKBP Oikumene Sibosur</a>
+                    <a class="collapse-item" href="{{url('jemaatMatio')}}">HKBP Matio</a>
                 </div>
             </div>
         </li>
 
+{{--        <li class="nav-item {{(request()->is('pendetaAktif') ? 'active' : '')}} {{(request()->is('pendetaPensiun') ? 'active' : '')}}">--}}
+{{--            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">--}}
+{{--                <i class="fas fa-fw fa-bible"></i>--}}
+{{--                <span>Data Pendeta</span>--}}
+{{--            </a>--}}
+{{--            <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">--}}
+{{--                <div class="bg-white py-2 collapse-inner rounded">--}}
+{{--                    <a class="collapse-item" href="{{url('pendetaAktif')}}">Pendeta Aktif</a>--}}
+{{--                    <a class="collapse-item" href="{{url('pendetaPensiun')}}">Pendeta Pensiun</a>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </li>--}}
+
         <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item {{(request()->is('kasMain') ? 'active' : '')}} {{(request()->is('kolekteMain') ? 'active' : '')}}">
+        <li class="nav-item {{(request()->is('keuanganTornagodang') ? 'active' : '')}} {{(request()->is('keuanganPardomuan') ? 'active' : '')}} {{(request()->is('keuanganSibosur') ? 'active' : '')}} {{(request()->is('keuanganMatio') ? 'active' : '')}}">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                 <i class="fas fa-fw fa-dollar-sign"></i>
                 <span>Keuangan</span>
             </a>
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="{{url('kasMain')}}">Kas</a>
-                    <a class="collapse-item" href="{{url('kolekteMain')}}">Kolekte</a>
+                    <a class="collapse-item" href="{{url('keuanganTornagodang')}}">HKBP Tornagodang</a>
+                    <a class="collapse-item" href="{{url('keuanganPardomuan')}}">HKBP Pardomuan</a>
+                    <a class="collapse-item" href="{{url('keuanganSibosur')}}">HKBP Oikumene Sibosur</a>
+                    <a class="collapse-item" href="{{url('keuanganMatio')}}">HKBP Matio</a>
+{{--                    <a class="collapse-item" href="{{url('kasMain')}}">Kas</a>--}}
+{{--                    <a class="collapse-item" href="{{url('kolekteMain')}}">Kolekte</a>--}}
                 </div>
             </div>
         </li>
